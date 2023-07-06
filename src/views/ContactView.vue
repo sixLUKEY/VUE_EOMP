@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <h1>
+    <main>
+        <h1 class="heading w-fit relative text-black">
             Contact Me
         </h1>
-    </div>
+    </main>
 </template>
 
 <script>

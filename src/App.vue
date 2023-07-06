@@ -19,6 +19,13 @@ import NavbarComp from './components/NavbarComp.vue';
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+:root{
+  --primary-color: #BF0101;
+  --secondary-color: #7C7A7A;
+  --black: #080708;
+  --white: #EFE1E1;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -31,18 +38,49 @@ import NavbarComp from './components/NavbarComp.vue';
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #EFE1E1;
+  
 }
 
-/* nav {
-  padding: 30px;
+::-webkit-scrollbar {
+     display: none;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-} */
-
-nav a.router-link-exact-active {
-  color: #42b983;
+main{
+  padding-inline: 1.25rem;
 }
+
+.heading, .headingAlt{
+  width: fit-content;
+    font-size: 4rem;
+    padding-inline-start: 0.5rem;
+    position: relative;
+    color: var(--black);
+  }
+  .heading::after{
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 10px;
+    bottom: 10%;
+    left: 0;
+    background-color: var(--primary-color);
+    border-radius: 0 999px 999px 0;
+  }
+
+  .headingAlt{
+    margin-inline: auto 0;
+    padding-inline-end: 0.5rem;
+  }
+
+  .headingAlt::after{
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 10px;
+    bottom: 10%;
+    background-color: var(--primary-color);
+    right: 0;
+    border-radius: 999px 0 0 999px;
+  }
 </style>
