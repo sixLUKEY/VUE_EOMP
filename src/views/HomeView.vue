@@ -90,14 +90,14 @@ export default {};
 }
 
 .leftSection .topSection {
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 .backgroundText1,
 .backgroundText2 {
   font-size: 1.25rem;
   width: 80px;
-  opacity: 0.2;
+  opacity: 0.15;
   transition: 0.4s;
   color: black;
   height: fit-content;
