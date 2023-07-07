@@ -176,6 +176,7 @@ export default {
 .cvButton{
     height: fit-content;
     transition: 0.2s;
+    display: none;
 }
 
 .cvButton:hover{
