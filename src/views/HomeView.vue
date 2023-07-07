@@ -2,11 +2,13 @@
   <div class="hero w-full h-[85vh] bg-primary flex gap-5 p-5 relative">
     <div class="leftSection flex flex-col gap-5">
       <div class="topSection flex text-start text-white items-center z-10">
-        Web Developer
+        <span class="heroHeading">
+          Web Developer
         <br />
         UI/UX designer
         <br />
         Lorem User
+        </span>
       </div>
       <div class="bottomSection flex justify-start items-center">
         <router-link to="/projects" class="z-10"
@@ -22,8 +24,10 @@
     <div class="rightSection flex flex-col gap-5">
       <div class="topSection"></div>
       <div class="bottomSection text-white flex items-end text-start z-20">
-        I am a South African based web developer who designs user interfaces and
+        <span class="heroParagraph">
+          I am a South African based web developer who designs user interfaces and
         creates 3D character models
+        </span>
       </div>
     </div>
     <div class="absolute bottom-0 left-0 w-3/5 h-2/5 backgroundBlock1"></div>
@@ -41,7 +45,7 @@
     <img
       src="https://i.postimg.cc/sfm84k72/pngwing-com-79.png"
       alt="kunai"
-      class="absolute kunai w-[150px]"
+      class="absolute kunai w-[200px]"
     />
   </div>
 </template>
@@ -51,11 +55,17 @@ export default {};
 </script>
 
 <style scoped>
+
+.heroHeading{
+  font-size: 10vw;
+}
+
 .kunai {
   top: 40%;
-  left: 30%;
+  left: 33%;
   z-index: 998;
   transition: 0.2s;
+  width: 25vw;
 }
 
 .kunai:hover{
@@ -135,5 +145,26 @@ a {
   background-color: black;
   color: white;
   filter: drop-shadow(-5px 5px 5px #00000094);
+}
+
+@media screen and (min-width: 900px) {
+  .heroHeading{
+    font-size: 6.5vw;
+  }
+
+  .heroParagraph{
+    font-size: 4vw;
+  }
+
+  .kunai{
+    top: 33%;
+    left: 33%;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .backgroundText2{
+    width: 200px;
+  }
 }
 </style>

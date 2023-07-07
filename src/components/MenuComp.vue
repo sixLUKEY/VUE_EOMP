@@ -106,6 +106,7 @@ export default {
 #menu{
     transition: 0.3s;
     z-index: 999;
+    max-width: 600px;
 }
 
 a {
@@ -167,5 +168,11 @@ button {
     100%{
         transform: translateX(0px);
     }
+}
+
+@media screen and (max-width:400px) {
+  a{
+    font-size: 2rem;
+  }
 }
 </style>
