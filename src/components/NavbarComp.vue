@@ -46,15 +46,12 @@
         </g>
       </svg>
     </button>
-    <div class="logo flex gap-3 justify-center items-end font-bold">
-        <div class="outerCircle h-[50px] w-[50px] bg-white rounded-full flex justify-center items-center">
-            <div class="innerCircle w-[80%] h-[80%] bg-black rounded-full">
-                
-            </div>
-        </div>
-        sixLUKEY
-    </div>
-    <div class="themeSwitch">Theme</div>
+    <router-link to="/">
+      <div class="logo flex gap-3 justify-center items-end font-bold">
+          <img src="https://i.postimg.cc/sXBvn7Q7/luke-Untitled-1-1.png" alt="lukeyLogo" class="h-[50px] rounded-full">
+          sixLUKEY
+      </div>
+    </router-link>
   </nav>
 
   <div class="menu">
@@ -90,6 +87,11 @@ svg:hover rect{
 
 .logo{
     font-size: 2rem;
+}
+
+a{
+  text-decoration: none;
+  color: var(--white);
 }
 
 </style>

@@ -1,15 +1,18 @@
 <template>
   <NavbarComp/>
   <router-view/>
+  <FooterComp/>
 </template>
 
 <script>
 
-import NavbarComp from './components/NavbarComp.vue';
+import NavbarComp from './components/NavbarComp.vue'
+import FooterComp from './components/FooterComp.vue';
  
  export default {
     components : {
-      NavbarComp
+      NavbarComp,
+      FooterComp
     }
  }
 
@@ -26,6 +29,10 @@ import NavbarComp from './components/NavbarComp.vue';
   --white: #EFE1E1;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -39,7 +46,6 @@ import NavbarComp from './components/NavbarComp.vue';
   text-align: center;
   color: #2c3e50;
   background-color: #EFE1E1;
-  
 }
 
 ::-webkit-scrollbar {
@@ -48,6 +54,7 @@ import NavbarComp from './components/NavbarComp.vue';
 
 main{
   padding-inline: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .heading, .headingAlt{
@@ -82,5 +89,11 @@ main{
     background-color: var(--primary-color);
     right: 0;
     border-radius: 999px 0 0 999px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .heading, .headingAlt{
+      font-size: 3rem;
+    }
   }
 </style>

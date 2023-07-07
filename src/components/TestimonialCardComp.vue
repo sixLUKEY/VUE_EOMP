@@ -1,29 +1,16 @@
 <template>
     <div class="testimonialCard flex gap-5 my-5">
-        <div class="image flex-[4] bg-black rounded-md">
-
-        </div>
+            <img :src="testimonial.image" :alt="testimonial.name" class="image">
         <div class="testimonialBox flex-[5] gap-3 flex flex-col">
             <h2>
-                Name Surname
+                {{ testimonial.name }}
             </h2>
 
             <div class="infoBox flex text-white gap-3">
                 <div class="textBox bg-black flex-[5] p-3 rounded-md">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sapiente voluptatibus earum vitae vero dolorum animi laboriosam a veritatis repellendus.
+                        {{ testimonial.message }}
                     </p>
-                </div>
-                <div class="socialsBox flex-1 flex flex-col gap-4">
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
                 </div>
             </div>
         </div>
@@ -32,17 +19,30 @@
 
 <script>
     export default {
-
+        props: [
+            "testimonial"
+        ]
     }
 </script>
 
 <style scoped>
+
+    img{
+        max-width: 100%;
+        max-width: 200px;
+        object-fit: cover;
+    }
 
     h2{
         position: relative;
         text-align: start;
         color: var(--black);
         padding-inline-start: 0.5rem;
+        font-size: 6vw;
+    }
+
+    p{
+        font-size: 3vw;
     }
 
     h2::after{
@@ -60,10 +60,7 @@
         text-align: end;
         padding-inline-end: 0.5rem;
     }
-
-    /* .testimonialCard:nth-child(odd) h2::after{
-        border-radius: 999px 999px;
-    } */
+    
 
     .socialsBox > div{
         background-color: orange;
@@ -89,5 +86,17 @@
 
     .textBox{
         text-align: start;
+    }
+
+    @media screen and (min-width: 1000px) {
+        img{
+            max-width: 300px;
+        }
+    }
+
+    @media screen and (max-width:400px) {
+        img{
+            max-width: 20vw;
+        }
     }
 </style>
