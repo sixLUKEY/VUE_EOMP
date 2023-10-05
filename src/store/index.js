@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 const url = "https://sixlukey.github.io/data.json"
 
 
-export default createStore({
+export default createStore({  
   state: {
     education: null,
     projects: null,

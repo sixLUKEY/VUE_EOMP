@@ -4,7 +4,7 @@
       <h2 class="text-white mb-3">
         {{ project.name }}
       </h2>
-        <img class="image bg-black flex-1 rounded-md" :src="project.image" :alt="project.name">      
+        <img class="image bg-black flex-1 rounded-md object-contain" :src="project.image" :alt="project.name">      
       <div class="overlay rounded-md flex justify-evenly items-center">
         <a :href="project.github" target="_blank">
           <i class="fa-brands fa-github" style="color: #ffffff;"></i>
@@ -16,7 +16,7 @@
     </div>
     <div class="flex flex-col flex-1 textBox">
       <div class="flex-1 ">
-        <p class="stack ">
+        <p class="stack text-xl">
           {{ project.stack }}
         </p>
       </div>
@@ -98,6 +98,10 @@ i{
   .stack{
     font-size: 2vw;
   }
+
+  .description{
+  font-size: 2rem;
+}
 }
 
 </style>
